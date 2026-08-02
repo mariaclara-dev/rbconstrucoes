@@ -1,0 +1,815 @@
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ===========================
+   BODY
+=========================== */
+
+body {
+
+    background: #eef2f7;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container {
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+/* ===========================
+   CHAT
+=========================== */
+
+.chat {
+
+    width: 480px;
+
+    height: 720px;
+
+    max-height: 90vh;
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+
+}
+
+/* ===========================
+   CABEÇALHO
+=========================== */
+
+.header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #0B4EA2;
+
+    color: white;
+
+    padding: 16px 20px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+
+}
+
+
+.logo-area {
+
+    width: 60px;
+
+    height: 60px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+.logo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+
+.company-info h1 {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+.company-info p {
+
+    font-size: 14px;
+
+    margin: 3px 0 6px;
+
+    opacity: .9;
+
+}
+
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+}
+
+
+.online-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    background: #2ecc71;
+
+    border-radius: 50%;
+
+    animation: pulseOnline 1.8s infinite;
+
+}
+
+
+@keyframes pulseOnline {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.4);
+
+        opacity: .6;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* ===========================
+   ÁREA DAS MENSAGENS
+=========================== */
+
+.chat-body {
+
+    padding: 25px;
+
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+}
+
+.chat-body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+/* ===========================
+   MENSAGENS
+=========================== */
+
+.message {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    margin-bottom: 18px;
+
+    animation: fadeMessage .35s ease;
+
+}
+
+
+.bot {
+
+    justify-content: flex-start;
+
+}
+
+
+.user {
+
+    justify-content: flex-end;
+
+}
+
+
+.avatar {
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #0B4EA2;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+
+    margin-right: 10px;
+
+}
+
+
+
+.message-content {
+
+    width: auto;
+
+    max-width: 80%;
+
+    min-width: 0;
+
+}
+
+
+/* ===========================
+   BALÕES
+=========================== */
+
+.bubble {
+
+    background: #F4F7FB;
+
+    padding: 12px 18px;
+
+    border-radius: 18px;
+
+    display: block;
+
+    max-width: 100%;
+
+    width: fit-content;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .08);
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.bubble p {
+
+    margin-bottom: 8px;
+
+}
+
+
+.bubble p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+
+.user .message-content {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+
+
+.userBubble {
+
+    background: #0B4EA2;
+
+    color: white;
+
+    display: block;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+
+}
+
+.userBubble p {
+
+    display: inline-block;
+
+    white-space: normal;
+
+    margin: 0;
+
+}
+
+
+
+/* HORÁRIO */
+
+.time {
+
+    display: block;
+
+    font-size: 10px;
+
+    opacity: .7;
+
+    text-align: right;
+
+    margin-top: 6px;
+
+}
+
+
+
+/* ===========================
+   ANIMAÇÃO MENSAGENS
+=========================== */
+
+@keyframes fadeMessage {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.options {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding: 20px 25px;
+
+    background: white;
+
+}
+
+
+
+.options button {
+
+    background: #0B4EA2;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 16px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    width: 100%;
+
+    white-space: nowrap;
+
+}
+
+
+
+.options button:hover {
+
+    background: #083B7C;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+@keyframes aparecerOpcao {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+
+/* ===========================
+   DIGITANDO
+=========================== */
+
+.typing {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    width: 70px;
+
+    height: 40px;
+
+}
+
+
+.typing span {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #0B4EA2;
+
+    animation: typing 1.2s infinite;
+
+}
+
+
+.typing span:nth-child(2) {
+
+    animation-delay: .2s;
+
+}
+
+
+.typing span:nth-child(3) {
+
+    animation-delay: .4s;
+
+}
+
+.typing-animation {
+
+    animation: fadeMessage .3s ease;
+
+}
+
+
+@keyframes typing {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+
+    50% {
+
+        transform: translateY(-5px);
+
+    }
+
+}
+
+
+
+/* ===========================
+   CAMPO NOME
+=========================== */
+
+
+.input-area {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+.input-area input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+.input-area input:focus {
+
+    border-color: #0B4EA2;
+
+}
+
+
+
+.input-area button {
+
+    background: #0B4EA2;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 0 20px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* ===========================
+   RESUMO
+=========================== */
+
+
+.summary {
+
+    background: #f4f7fb;
+
+    border-left: 5px solid #0B4EA2;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ===========================
+   BOTÕES CABEÇALHO
+=========================== */
+.header-buttons {
+
+    margin-left: auto;
+
+}
+
+
+#reiniciarChat {
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #0B4EA2;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+#reiniciarChat:hover {
+
+    transform: rotate(180deg);
+
+}
+
+/* ===========================
+   TELA INICIAL
+=========================== */
+
+
+.splash {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: #0B4EA2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    z-index: 9999;
+
+}
+
+
+.splash-logo {
+
+    width: 110px;
+
+    height: 110px;
+
+    object-fit: contain;
+
+    background: white;
+
+    border-radius: 50%;
+
+    padding: 10px;
+
+    animation: pulsarLogo 1.5s infinite;
+
+}
+
+
+.splash h1 {
+
+    margin-top: 20px;
+
+    font-size: 28px;
+
+}
+
+
+.splash p {
+
+    margin-top: 8px;
+
+    font-size: 18px;
+
+}
+
+
+.loader {
+
+    width: 35px;
+
+    height: 35px;
+
+    border: 4px solid rgba(255, 255, 255, .4);
+
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    margin-top: 25px;
+
+    animation: girar 1s linear infinite;
+
+}
+
+
+@keyframes girar {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes pulsarLogo {
+
+    50% {
+
+        transform: scale(1.08);
+
+    }
+
+}
+
+#btnNovoAtendimento {
+
+    background: white !important;
+
+    color: #0B4EA2 !important;
+
+    border: 2px solid #0B4EA2 !important;
+
+}
