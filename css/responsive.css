@@ -1,979 +1,614 @@
-/*==================================================
-RB CONSTRUÇÕES E INCORPORAÇÕES
-RESPONSIVIDADE
-==================================================*/
+@media (max-width:900px) {
+nav { display: none; position: absolute; top: 90px; left: 0; width: 100%; background: white; flex-direction: column; padding: 35px; box-shadow: 0 10px 25px rgba(0, 0, 0, .10); gap: 25px; }
 
-/*
-    Este arquivo contém somente regras responsivas.
-    O style.css permanece responsável pelo visual/base.
-    As classes e IDs existentes foram preservados.
-*/
+#menu-btn { display: block; }
 
-/*==================================================
-BASE RESPONSIVA
-==================================================*/
+.hero-conteudo { width: 90%; left: 5%; }
 
-html {
-    overflow-x: hidden;
+.hero-conteudo h1 { font-size: 42px; }
+
+.hero-conteudo p { font-size: 18px; }
+
+.slider-botoes { gap: 18px; bottom: 25px; }
+
+.indicador { width: 12px; height: 12px; }
+
+.sobre-grid { grid-template-columns: 1fr; }
+
+.sobre-imagem img { height: 350px; }
+
+.galeria { grid-template-columns: 1fr; }
+
+.titulo h2 { font-size: 34px; }
+
+.sobre-texto h3 { font-size: 30px; }
+
+.contato-info { padding: 30px; }
+
+.contato-info p { font-size: 17px; }
+
+.obras-grid { grid-template-columns: 1fr; }
+
+.obra-card-img { height: 230px; }
+
+nav.ativo { display: flex; }
+
+nav a { color: #17324B; }
+
+.execucao-grid { grid-template-columns: 1fr; }
+
+.obra-banner { height: 350px; }
+
+.dados-obra { grid-template-columns: 1fr; }
+
+.galeria-grid { grid-template-columns: repeat(2, 1fr); }
+
+.pagina-banner h1 { font-size: 2.3rem; }
+
+.galeria-obras .obras-grid { grid-template-columns: 1fr; }
 }
 
-body {
-    min-width: 320px;
+@media (max-width:700px) {
+.navegacao-portfolio { flex-direction: column; }
+
+.navegacao-portfolio a { width: 100%; justify-content: center; }
+
+.banner-interno { height: 320px; }
+
+.banner-conteudo p { font-size: 16px; }
+
+.breadcrumb { font-size: 12px; gap: 8px; }
+
+.modal-info { padding: 25px; }
+
+.modal-info h2 { font-size: 24px; }
+
+.modal-anterior, .modal-proximo { width: 40px; height: 40px; font-size: 18px; }
+
+.galeria-obras .obra-card-info { padding: 25px; }
+
+.galeria-obras .obra-card-info h3 { font-size: 28px; }
+
+.galeria-obras .informacoes-obra { grid-template-columns: 1fr; }
+
+.galeria-obras .obra-card-img { min-height: 250px; }
+
+.localizacao-box { flex-direction: column; text-align: center; }
 }
 
-.container {
-    width: min(90%, 1200px);
+@media (max-width:768px) {
+.navegacao-empreendimento .container { flex-direction: column; }
+
+.navegacao-empreendimento a { width: 100%; justify-content: center; }
+
+.empreendimento-page { padding: 70px 0; }
+
+.empreendimento-info h2 { font-size: 2rem; }
+
+.slider-btn { width: 45px; height: 45px; font-size: 18px; }
+
+.prev { left: 10px; }
+
+.next { right: 10px; }
+
+.slider-miniaturas img { width: 90px; height: 65px; }
 }
 
-/* Evita que imagens e conteúdos ultrapassem a viewport */
-img,
-video,
-iframe {
-    max-width: 100%;
+@media (max-width:600px) {
+.execucao-imagem { height: 230px; }
+
+.execucao-conteudo { padding: 22px; }
+
+.informacoes-obra { grid-template-columns: 1fr; }
+
+.status { font-size: .75rem; padding: 8px 14px; }
+
+.obra-detalhe { padding-top: 120px; }
+
+.obra-info { padding: 25px; }
+
+.obra-info h1 { font-size: 1.8rem; }
+
+.obra-banner { height: 250px; }
+
+.galeria-grid { grid-template-columns: 1fr; }
+
+.pagina-banner { padding: 140px 20px 70px; }
+
+.pagina-banner h1 { font-size: 1.8rem; }
+
+.galeria-obras .obra-card-img { height: 250px; }
+
+.obra-hero-imagem { height: 300px; }
+
+.obra-cabecalho h1 { font-size: 2rem; }
+
+.dados-projeto, .caracteristicas-grid, .galeria-grid { grid-template-columns: 1fr; }
+
+.timeline-item { flex-direction: column; }
 }
 
-/*==================================================
-TABLETS / TELAS MÉDIAS
-==================================================*/
+@media (max-width:1000px) {
+.dados-projeto { grid-template-columns: repeat(2, 1fr); }
+
+.caracteristicas-grid { grid-template-columns: repeat(2, 1fr); }
+
+.galeria-grid { grid-template-columns: 1fr 1fr; }
+
+.galeria-obras .obra-card { grid-template-columns: 1fr; }
+
+.galeria-obras .obra-card-img { min-height: 320px; }
+
+.empreendimento-grid { grid-template-columns: 1fr; gap: 50px; }
+
+.empreendimento-info { order: 2; }
+
+.slider-empreendimento { order: 1; }
+}
+
+@media (max-width:992px) {
+.video-depoimento { flex: 0 0 calc((100% - 25px)/2); }
+}
+
+@media (max-width:650px) {
+.video-depoimento { flex: 0 0 100%; }
+
+.slider-btn { width: 45px; height: 45px; }
+}
+
+@media (max-width:480px) {
+.empreendimento-info h2 { font-size: 1.8rem; }
+
+.dados div { padding: 15px; }
+
+.slider-miniaturas { gap: 10px; }
+
+.slider-miniaturas img { width: 70px; height: 55px; }
+}
 
 @media (max-width: 1100px) {
+section { padding: 85px 0; }
 
-    section {
-        padding: 85px 0;
-    }
+.container { width: min(92%, 1000px); }
 
-    .container {
-        width: min(92%, 1000px);
-    }
+nav { gap: 24px; }
 
-    nav {
-        gap: 24px;
-    }
+.sobre-grid { gap: 45px; }
 
-    .sobre-grid {
-        gap: 45px;
-    }
+.sobre-imagem { height: auto; }
 
-    .sobre-imagem {
-        height: auto;
-    }
+.sobre-imagem img { width: min(100%, 400px); height: auto; aspect-ratio: 1 / 1; }
 
-    .sobre-imagem img {
-        width: min(100%, 400px);
-        height: auto;
-        aspect-ratio: 1 / 1;
-    }
+.galeria-obras .obra-card { grid-template-columns: 360px 1fr; }
 
-    .galeria-obras .obra-card {
-        grid-template-columns: 360px 1fr;
-    }
+.empreendimento-grid { grid-template-columns: 360px 1fr; gap: 40px; }
 
-    .empreendimento-grid {
-        grid-template-columns: 360px 1fr;
-        gap: 40px;
-    }
+.slider-imagem { height: 520px; }
 
-    .slider-imagem {
-        height: 520px;
-    }
-
-    .dados-projeto,
-    .caracteristicas-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.dados-projeto, .caracteristicas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-/*==================================================
-MENU + TABLET
-==================================================*/
 
 @media (max-width: 900px) {
+section { padding: 75px 0; }
 
-    section {
-        padding: 75px 0;
-    }
+section:not(.hero) { scroll-margin-top: 90px; }
 
-    section:not(.hero) {
-        scroll-margin-top: 90px;
-    }
+header { height: 80px; }
 
-    header {
-        height: 80px;
-    }
+.logo img { height: 62px; width: auto; }
 
-    .logo img {
-        height: 62px;
-        width: auto;
-    }
+nav { display: none; position: absolute; top: 80px; left: 0; width: 100%; max-height: calc(100vh - 80px); overflow-y: auto; background: var(--branco); flex-direction: column; align-items: stretch; gap: 0; padding: 20px 6%; box-shadow: 0 12px 25px rgba(0, 0, 0, .10); }
 
-    nav {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        max-height: calc(100vh - 80px);
-        overflow-y: auto;
-        background: var(--branco);
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        padding: 20px 6%;
-        box-shadow: 0 12px 25px rgba(0, 0, 0, .10);
-    }
+nav.ativo { display: flex; }
 
-    nav.ativo {
-        display: flex;
-    }
+nav a { padding: 14px 0; }
 
-    nav a {
-        padding: 14px 0;
-    }
+#menu-btn { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; }
 
-    #menu-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 46px;
-        height: 46px;
-    }
+.hero { height: 100svh; min-height: 620px; background-attachment: scroll; }
 
-    .hero {
-        height: 100svh;
-        min-height: 620px;
-        background-attachment: scroll;
-    }
+.hero-conteudo { width: min(90%, 700px); left: 5%; top: 55%; }
 
-    .hero-conteudo {
-        width: min(90%, 700px);
-        left: 5%;
-        top: 55%;
-    }
+.hero-conteudo h1 { font-size: clamp(38px, 7vw, 58px); line-height: 1.08; }
 
-    .hero-conteudo h1 {
-        font-size: clamp(38px, 7vw, 58px);
-        line-height: 1.08;
-    }
+.hero-conteudo p { max-width: 620px; font-size: clamp(17px, 2.5vw, 20px); line-height: 1.6; }
 
-    .hero-conteudo p {
-        max-width: 620px;
-        font-size: clamp(17px, 2.5vw, 20px);
-        line-height: 1.6;
-    }
+.slider-botoes { bottom: 24px; gap: 16px; }
 
-    .slider-botoes {
-        bottom: 24px;
-        gap: 16px;
-    }
+.indicador { width: 12px; height: 12px; }
 
-    .indicador {
-        width: 12px;
-        height: 12px;
-    }
+.sobre-grid { grid-template-columns: 1fr; gap: 45px; }
 
-    .sobre-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
+.sobre-imagem img { width: min(100%, 430px); }
 
-    .sobre-imagem img {
-        width: min(100%, 430px);
-    }
+.galeria, .galeria-grid, .galeria-detalhes .galeria { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .galeria,
-    .galeria-grid,
-    .galeria-detalhes .galeria {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.obras-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .obras-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.execucao-grid { grid-template-columns: 1fr; }
 
-    .execucao-grid {
-        grid-template-columns: 1fr;
-    }
+.obra-banner { height: 380px; }
 
-    .obra-banner {
-        height: 380px;
-    }
+.obra-hero-imagem { height: 420px; }
 
-    .obra-hero-imagem {
-        height: 420px;
-    }
+.contato-info { padding: 35px; }
 
-    .contato-info {
-        padding: 35px;
-    }
+.mapa iframe { height: 420px; }
 
-    .mapa iframe {
-        height: 420px;
-    }
+.navegacao-empreendimento .container { flex-direction: column; }
 
-    .navegacao-empreendimento .container {
-        flex-direction: column;
-    }
+.navegacao-empreendimento a { width: 100%; justify-content: center; }
 
-    .navegacao-empreendimento a {
-        width: 100%;
-        justify-content: center;
-    }
+.galeria-obras .obra-card { grid-template-columns: 1fr; }
 
-    .galeria-obras .obra-card {
-        grid-template-columns: 1fr;
-    }
+.galeria-obras .obra-card-img { min-height: 320px; height: 320px; }
 
-    .galeria-obras .obra-card-img {
-        min-height: 320px;
-        height: 320px;
-    }
+.empreendimento-grid { grid-template-columns: 1fr; gap: 45px; }
 
-    .empreendimento-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
+.empreendimento-info { order: 2; }
 
-    .empreendimento-info {
-        order: 2;
-    }
+.slider-empreendimento { order: 1; }
 
-    .slider-empreendimento {
-        order: 1;
-    }
+.slider-imagem { height: 520px; }
 
-    .slider-imagem {
-        height: 520px;
-    }
+.prev { left: 15px; }
 
-    .prev {
-        left: 15px;
-    }
+.next { right: 15px; }
 
-    .next {
-        right: 15px;
-    }
+.dados-projeto, .caracteristicas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .dados-projeto,
-    .caracteristicas-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.timeline-item { gap: 18px; }
 
-    .timeline-item {
-        gap: 18px;
-    }
-
-    .localizacao-box {
-        gap: 22px;
-    }
+.localizacao-box { gap: 22px; }
 }
-
-/*==================================================
-TABLETS PEQUENOS
-==================================================*/
 
 @media (max-width: 768px) {
+.container { width: min(92%, 680px); }
 
-    .container {
-        width: min(92%, 680px);
-    }
+.titulo, .titulo-secao { margin-bottom: 40px; }
 
-    .titulo,
-    .titulo-secao {
-        margin-bottom: 40px;
-    }
+.titulo h2, .titulo-secao h2 { font-size: clamp(30px, 6vw, 38px); }
 
-    .titulo h2,
-    .titulo-secao h2 {
-        font-size: clamp(30px, 6vw, 38px);
-    }
+.sobre-texto h3 { font-size: clamp(28px, 6vw, 34px); }
 
-    .sobre-texto h3 {
-        font-size: clamp(28px, 6vw, 34px);
-    }
+.sobre-texto p { font-size: 16px; line-height: 1.8; }
 
-    .sobre-texto p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
+.card { padding: 35px 25px; }
 
-    .card {
-        padding: 35px 25px;
-    }
+.galeria, .galeria-grid, .galeria-detalhes .galeria, .dados-projeto, .caracteristicas-grid { grid-template-columns: 1fr; }
 
-    .galeria,
-    .galeria-grid,
-    .galeria-detalhes .galeria,
-    .dados-projeto,
-    .caracteristicas-grid {
-        grid-template-columns: 1fr;
-    }
+.obra-card-titulo { left: 20px; bottom: 20px; }
 
-    .galeria img {
-        height: 280px;
-    }
+.obra-card-titulo h3 { font-size: 24px; }
 
-    .obra-imagem img {
-        height: 300px;
-    }
+.obra-card-info, .galeria-obras .obra-card-info { padding: 25px; }
 
-    .obra-card-titulo {
-        left: 20px;
-        bottom: 20px;
-    }
+.galeria-obras .obra-card-info h3 { font-size: 28px; }
 
-    .obra-card-titulo h3 {
-        font-size: 24px;
-    }
+.obra-info { padding: 30px 25px; }
 
-    .obra-card-info,
-    .galeria-obras .obra-card-info {
-        padding: 25px;
-    }
+.obra-info h1 { font-size: clamp(1.9rem, 6vw, 2.4rem); }
 
-    .galeria-obras .obra-card-info h3 {
-        font-size: 28px;
-    }
+.obra-banner { height: 300px; }
 
-    .obra-info {
-        padding: 30px 25px;
-    }
+.obra-hero-imagem { height: 340px; }
 
-    .obra-info h1 {
-        font-size: clamp(1.9rem, 6vw, 2.4rem);
-    }
+.modal-conteudo { max-height: 92vh; overflow-y: auto; }
 
-    .obra-banner {
-        height: 300px;
-    }
+.modal-info { padding: 25px; }
 
-    .obra-hero-imagem {
-        height: 340px;
-    }
+.modal-anterior { left: 10px; }
 
-    .modal-conteudo {
-        max-height: 92vh;
-        overflow-y: auto;
-    }
+.modal-proximo { right: 10px; }
 
-    .modal-img {
-        height: 300px;
-    }
+.seta { width: 46px; height: 46px; font-size: 19px; }
 
-    .modal-info {
-        padding: 25px;
-    }
+.esquerda { left: 15px; }
 
-    .modal-anterior {
-        left: 10px;
-    }
+.direita { right: 15px; }
 
-    .modal-proximo {
-        right: 10px;
-    }
+.navegacao-portfolio { flex-direction: column; align-items: stretch; margin-top: 50px; }
 
-    .seta {
-        width: 46px;
-        height: 46px;
-        font-size: 19px;
-    }
+.navegacao-portfolio a { width: 100%; justify-content: center; }
 
-    .esquerda {
-        left: 15px;
-    }
+.localizacao-box { padding: 30px; }
 
-    .direita {
-        right: 15px;
-    }
+.localizacao-icon { width: 68px; height: 68px; font-size: 28px; flex: 0 0 auto; }
 
-    .navegacao-portfolio {
-        flex-direction: column;
-        align-items: stretch;
-        margin-top: 50px;
-    }
+.slider-track { gap: 20px; padding: 8px 4px 18px; }
 
-    .navegacao-portfolio a {
-        width: 100%;
-        justify-content: center;
-    }
+.video-depoimento { flex: 0 0 calc((100% - 20px) / 2); }
 
-    .localizacao-box {
-        padding: 30px;
-    }
+.slider-btn { width: 48px; height: 48px; }
 
-    .localizacao-icon {
-        width: 68px;
-        height: 68px;
-        font-size: 28px;
-        flex: 0 0 auto;
-    }
+.empreendimento-page { padding: 75px 0 55px; }
 
-    .slider-track {
-        gap: 20px;
-        padding: 8px 4px 18px;
-    }
+.empreendimento-info h2 { font-size: clamp(1.9rem, 6vw, 2.4rem); }
 
-    .video-depoimento {
-        flex: 0 0 calc((100% - 20px) / 2);
-    }
+.slider-imagem { height: min(75vw, 500px); min-height: 340px; }
 
-    .slider-btn {
-        width: 48px;
-        height: 48px;
-    }
+.slider-miniaturas { gap: 10px; }
 
-    .empreendimento-page {
-        padding: 75px 0 55px;
-    }
+.slider-miniaturas img { width: 86px; height: 62px; }
 
-    .empreendimento-info h2 {
-        font-size: clamp(1.9rem, 6vw, 2.4rem);
-    }
+.pagina-banner { padding: 145px 20px 75px; }
 
-    .slider-imagem {
-        height: min(75vw, 500px);
-        min-height: 340px;
-    }
+.pagina-banner h1 { font-size: clamp(1.9rem, 7vw, 2.6rem); }
 
-    .slider-miniaturas {
-        gap: 10px;
-    }
+.banner-interno { height: 340px; margin-top: 80px; }
 
-    .slider-miniaturas img {
-        width: 86px;
-        height: 62px;
-    }
+.banner-conteudo h1 { font-size: clamp(2rem, 7vw, 3rem); }
 
-    .pagina-banner {
-        padding: 145px 20px 75px;
-    }
+.banner-conteudo p { font-size: 17px; }
 
-    .pagina-banner h1 {
-        font-size: clamp(1.9rem, 7vw, 2.6rem);
-    }
+.breadcrumb { flex-wrap: wrap; gap: 7px; }
 
-    .banner-interno {
-        height: 340px;
-        margin-top: 80px;
-    }
+footer { padding: 70px 0; }
 
-    .banner-conteudo h1 {
-        font-size: clamp(2rem, 7vw, 3rem);
-    }
-
-    .banner-conteudo p {
-        font-size: 17px;
-    }
-
-    .breadcrumb {
-        flex-wrap: wrap;
-        gap: 7px;
-    }
-
-    footer {
-        padding: 70px 0;
-    }
-
-    .logo-footer {
-        width: min(210px, 70vw);
-    }
+.logo-footer { width: min(210px, 70vw); }
 }
-
-/*==================================================
-CELULAR
-==================================================*/
 
 @media (max-width: 600px) {
+section { padding: 60px 0; }
 
-    section {
-        padding: 60px 0;
-    }
-
-    .container {
-        width: min(92%, 520px);
-    }
-
-    header {
-        height: 74px;
-    }
-
-    .logo img {
-        height: 56px;
-    }
-
-    nav {
-        top: 74px;
-        max-height: calc(100vh - 74px);
-    }
-
-    .hero {
-        min-height: 560px;
-    }
-
-    .hero-conteudo {
-        top: 54%;
-    }
-
-    .hero-conteudo span {
-        padding: 7px 13px;
-        font-size: 11px;
-        letter-spacing: 2px;
-    }
-
-    .hero-conteudo h1 {
-        font-size: clamp(34px, 10vw, 46px);
-    }
-
-    .hero-conteudo p {
-        font-size: 16px;
-    }
-
-    .slider-botoes {
-        bottom: 18px;
-        gap: 12px;
-    }
-
-    .titulo span,
-    .titulo-secao span {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    .titulo h2,
-    .titulo-secao h2 {
-        font-size: 29px;
-        margin-top: 14px;
-    }
-
-    .sobre-imagem {
-        height: auto;
-    }
-
-    .sobre-imagem img {
-        width: 100%;
-        max-width: 360px;
-    }
-
-    .card {
-        padding: 30px 22px;
-    }
-
-    .card i {
-        font-size: 46px;
-    }
-
-    .card h3 {
-        font-size: 21px;
-    }
-
-    .galeria img,
-    .obra-imagem img {
-        height: 240px;
-    }
-
-    .obras-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        margin-top: 40px;
-    }
-
-    .obra-card {
-        border-radius: 18px;
-    }
-
-    .obra-card-titulo h3 {
-        font-size: 22px;
-    }
-
-    .obra-card-info {
-        padding: 22px;
-    }
-
-    .obra-card-info p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .galeria-obras .obra-card-img {
-        min-height: 230px;
-        height: 230px;
-    }
-
-    .execucao-imagem {
-        height: 230px;
-    }
-
-    .execucao-conteudo {
-        padding: 22px;
-    }
-
-    .informacoes-obra {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .status {
-        font-size: .75rem;
-        padding: 8px 14px;
-    }
-
-    .obra-detalhe {
-        padding: 105px 0 60px;
-    }
-
-    .obra-banner {
-        height: 240px;
-        margin-bottom: 25px;
-    }
-
-    .obra-info {
-        padding: 22px;
-    }
-
-    .obra-info h1 {
-        font-size: 1.75rem;
-    }
-
-    .dados-obra {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .galeria-grid {
-        gap: 15px;
-    }
-
-    .galeria-grid img {
-        height: 230px;
-    }
-
-    .obra-hero {
-        padding-top: 90px;
-    }
-
-    .obra-hero-imagem {
-        height: 260px;
-    }
-
-    .obra-cabecalho h1 {
-        font-size: 1.9rem;
-    }
-
-    .dados-projeto div,
-    .caracteristicas-grid div {
-        padding: 24px 20px;
-    }
-
-    .timeline-item {
-        flex-direction: column;
-    }
-
-    .timeline-icon {
-        min-width: 48px;
-        width: 48px;
-        height: 48px;
-    }
-
-    .localizacao-box {
-        flex-direction: column;
-        text-align: center;
-        padding: 25px 20px;
-    }
-
-    .localizacao-texto h3 {
-        font-size: 21px;
-    }
-
-    .mapa iframe {
-        height: 330px;
-    }
-
-    #topo {
-        right: 16px;
-        bottom: 16px;
-        width: 50px;
-        height: 50px;
-        font-size: 19px;
-    }
-
-    .contato-info {
-        padding: 24px 20px;
-    }
-
-    .contato-info p {
-        font-size: 16px;
-        gap: 12px;
-        overflow-wrap: anywhere;
-    }
-
-    .contato-botao {
-        margin-top: 30px;
-    }
-
-    .btn-whatsapp {
-        width: 100%;
-        justify-content: center;
-        padding: 14px 22px;
-    }
-
-    .navegacao-empreendimento,
-    .navegacao-portfolio {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .navegacao-portfolio a,
-    .navegacao-empreendimento a {
-        padding: 14px 20px;
-        font-size: 14px;
-    }
-
-    .video-depoimento {
-        flex: 0 0 100%;
-    }
-
-    #depoimentos {
-        padding: 65px 0;
-    }
-
-    .slider-track {
-        gap: 15px;
-    }
-
-    .slider-btn {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
-    }
-
-    .slider-imagem {
-        height: min(78vw, 430px);
-        min-height: 270px;
-        border-radius: 15px;
-    }
-
-    .prev {
-        left: 8px;
-    }
-
-    .next {
-        right: 8px;
-    }
-
-    .slider-miniaturas img {
-        width: 72px;
-        height: 52px;
-    }
-
-    .dados div {
-        padding: 15px;
-    }
-
-    .banner-interno {
-        height: 300px;
-        margin-top: 74px;
-    }
-
-    .banner-conteudo {
-        padding: 15px;
-    }
-
-    .banner-conteudo span {
-        font-size: 11px;
-        letter-spacing: 2px;
-    }
-
-    .banner-conteudo p {
-        font-size: 15px;
-        line-height: 1.6;
-    }
-
-    .breadcrumb {
-        font-size: 11px;
-        margin-bottom: 18px;
-    }
-
-    .modal-projeto {
-        padding: 10px;
-    }
-
-    .modal-conteudo {
-        border-radius: 18px;
-        max-height: 94vh;
-    }
-
-    .modal-img {
-        height: 220px;
-    }
-
-    .modal-info {
-        padding: 20px;
-    }
-
-    .modal-info h2 {
-        font-size: 22px;
-    }
-
-    .modal-anterior,
-    .modal-proximo {
-        width: 38px;
-        height: 38px;
-        font-size: 16px;
-    }
-
-    .modal-anterior {
-        left: 8px;
-    }
-
-    .modal-proximo {
-        right: 8px;
-    }
-
-    .fechar-modal {
-        width: 40px;
-        height: 40px;
-        top: 10px;
-        right: 10px;
-    }
-
-    .galeria-detalhes {
-        padding: 60px 0;
-    }
-
-    .galeria-detalhes .galeria {
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-detalhes img {
-        height: 230px;
-    }
-
-    .linha-evolucao {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    footer p {
-        font-size: 15px;
-        line-height: 1.75;
-    }
-
-    .footer-social {
-        gap: 14px;
-        margin: 30px 0;
-    }
-
-    .footer-social a {
-        width: 48px;
-        height: 48px;
-        font-size: 21px;
-    }
+.container { width: min(92%, 520px); }
+
+header { height: 74px; }
+
+.logo img { height: 56px; }
+
+nav { top: 74px; max-height: calc(100vh - 74px); }
+
+.hero { min-height: 560px; }
+
+.hero-conteudo { top: 54%; }
+
+.hero-conteudo span { padding: 7px 13px; font-size: 11px; letter-spacing: 2px; }
+
+.hero-conteudo h1 { font-size: clamp(34px, 10vw, 46px); }
+
+.hero-conteudo p { font-size: 16px; }
+
+.slider-botoes { bottom: 18px; gap: 12px; }
+
+.titulo span, .titulo-secao span { font-size: 12px; letter-spacing: 2px; }
+
+.titulo h2, .titulo-secao h2 { font-size: 29px; margin-top: 14px; }
+
+.sobre-imagem { height: auto; }
+
+.sobre-imagem img { width: 100%; max-width: 360px; }
+
+.card { padding: 30px 22px; }
+
+.card i { font-size: 46px; }
+
+.card h3 { font-size: 21px; }
+
+.obras-grid { grid-template-columns: 1fr; gap: 25px; margin-top: 40px; }
+
+.obra-card { border-radius: 18px; }
+
+.obra-card-titulo h3 { font-size: 22px; }
+
+.obra-card-info { padding: 22px; }
+
+.obra-card-info p { font-size: 15px; line-height: 1.7; }
+
+.galeria-obras .obra-card-img { min-height: 230px; height: 230px; }
+
+.execucao-imagem { height: 230px; }
+
+.execucao-conteudo { padding: 22px; }
+
+.informacoes-obra { grid-template-columns: 1fr; gap: 14px; }
+
+.status { font-size: .75rem; padding: 8px 14px; }
+
+.obra-detalhe { padding: 105px 0 60px; }
+
+.obra-banner { height: 240px; margin-bottom: 25px; }
+
+.obra-info { padding: 22px; }
+
+.obra-info h1 { font-size: 1.75rem; }
+
+.dados-obra { grid-template-columns: 1fr; gap: 15px; }
+
+.galeria-grid { gap: 15px; }
+
+.galeria-grid img { height: 230px; }
+
+.obra-hero { padding-top: 90px; }
+
+.obra-hero-imagem { height: 260px; }
+
+.obra-cabecalho h1 { font-size: 1.9rem; }
+
+.dados-projeto div, .caracteristicas-grid div { padding: 24px 20px; }
+
+.timeline-item { flex-direction: column; }
+
+.timeline-icon { min-width: 48px; width: 48px; height: 48px; }
+
+.localizacao-box { flex-direction: column; text-align: center; padding: 25px 20px; }
+
+.localizacao-texto h3 { font-size: 21px; }
+
+.mapa iframe { height: 330px; }
+
+#topo { right: 16px; bottom: 16px; width: 50px; height: 50px; font-size: 19px; }
+
+.contato-info { padding: 24px 20px; }
+
+.contato-info p { font-size: 16px; gap: 12px; overflow-wrap: anywhere; }
+
+.contato-botao { margin-top: 30px; }
+
+.btn-whatsapp { width: 100%; justify-content: center; padding: 14px 22px; }
+
+.navegacao-empreendimento, .navegacao-portfolio { padding-left: 0; padding-right: 0; }
+
+.navegacao-portfolio a, .navegacao-empreendimento a { padding: 14px 20px; font-size: 14px; }
+
+.prev { left: 8px; }
+
+.next { right: 8px; }
+
+.slider-miniaturas img { width: 72px; height: 52px; }
+
+.dados div { padding: 15px; }
+
+.banner-interno { height: 300px; margin-top: 74px; }
+
+.banner-conteudo { padding: 15px; }
+
+.banner-conteudo span { font-size: 11px; letter-spacing: 2px; }
+
+.banner-conteudo p { font-size: 15px; line-height: 1.6; }
+
+.breadcrumb { font-size: 11px; margin-bottom: 18px; }
+
+.modal-projeto { padding: 10px; }
+
+.modal-conteudo { border-radius: 18px; max-height: 94vh; }
+
+.modal-info { padding: 20px; }
+
+.modal-info h2 { font-size: 22px; }
+
+.modal-anterior, .modal-proximo { width: 38px; height: 38px; font-size: 16px; }
+
+.modal-anterior { left: 8px; }
+
+.modal-proximo { right: 8px; }
+
+.fechar-modal { width: 40px; height: 40px; top: 10px; right: 10px; }
+
+.galeria-detalhes { padding: 60px 0; }
+
+.galeria-detalhes .galeria { grid-template-columns: 1fr; }
+
+.galeria-detalhes img { height: 230px; }
+
+.linha-evolucao { flex-direction: column; gap: 15px; }
+
+footer p { font-size: 15px; line-height: 1.75; }
+
+.footer-social { gap: 14px; margin: 30px 0; }
+
+.footer-social a { width: 48px; height: 48px; font-size: 21px; }
 }
 
-/*==================================================
-CELULARES MUITO PEQUENOS
-==================================================*/
+@media (max-width: 992px) {
+#depoimentos { padding: 80px 0; }
+
+.depoimentos-slider { gap: 15px; margin-top: 45px; }
+
+.slider-track { gap: 20px; }
+
+.video-depoimento { flex: 0 0 calc((100% - 20px) / 2); }
+
+.slider-btn { width: 50px; height: 50px; font-size: 18px; }
+}
+
+@media (max-width: 650px) {
+#depoimentos { padding: 65px 0; }
+
+.depoimentos-slider { gap: 8px; margin-top: 35px; }
+
+.slider-track { gap: 15px; padding: 8px 3px 20px; scroll-snap-type: x mandatory; }
+
+.video-depoimento { flex: 0 0 100%; scroll-snap-align: center; border-radius: 18px; }
+
+.video-box { aspect-ratio: 9 / 16; }
+
+.slider-btn { width: 42px; height: 42px; font-size: 16px; }
+
+#depoimentos::before { width: 280px; height: 280px; top: -120px; right: -140px; }
+
+#depoimentos::after { width: 220px; height: 220px; bottom: -100px; left: -110px; }
+}
 
 @media (max-width: 480px) {
+.container { width: min(94%, 430px); }
 
-    .container {
-        width: min(94%, 430px);
-    }
+.logo img { height: 52px; }
 
-    .logo img {
-        height: 52px;
-    }
+#menu-btn { width: 42px; height: 42px; font-size: 25px; }
 
-    #menu-btn {
-        width: 42px;
-        height: 42px;
-        font-size: 25px;
-    }
+.hero { min-height: 520px; }
 
-    .hero {
-        min-height: 520px;
-    }
+.hero-conteudo h1 { font-size: 32px; }
 
-    .hero-conteudo h1 {
-        font-size: 32px;
-    }
+.hero-conteudo p { font-size: 15px; }
 
-    .hero-conteudo p {
-        font-size: 15px;
-    }
+.empreendimento-info h2 { font-size: 1.7rem; }
 
-    .galeria img,
-    .obra-imagem img {
-        height: 210px;
-    }
+.slider-miniaturas { gap: 7px; }
 
-    .empreendimento-info h2 {
-        font-size: 1.7rem;
-    }
+.slider-miniaturas img { width: 64px; height: 48px; }
 
-    .slider-miniaturas {
-        gap: 7px;
-    }
+.obra-card-titulo { left: 16px; bottom: 16px; }
 
-    .slider-miniaturas img {
-        width: 64px;
-        height: 48px;
-    }
+.obra-card-titulo h3 { font-size: 20px; }
 
-    .obra-card-titulo {
-        left: 16px;
-        bottom: 16px;
-    }
-
-    .obra-card-titulo h3 {
-        font-size: 20px;
-    }
-
-    .btn-whatsapp {
-        font-size: .92rem;
-    }
+.btn-whatsapp { font-size: .92rem; }
 }
-
-/*==================================================
-ACESSIBILIDADE / REDUÇÃO DE MOVIMENTO
-==================================================*/
 
 @media (prefers-reduced-motion: reduce) {
+html { scroll-behavior: auto; }
 
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-    }
+*, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
-/*==================================================
-TOQUE / HOVER
-==================================================*/
-
 @media (hover: none) and (pointer: coarse) {
+.obra:hover, .obra-card:hover, .card:hover, .execucao-card:hover, .caracteristica-card:hover, .card-caracteristica:hover { transform: none; }
 
-    .obra:hover,
-    .obra-card:hover,
-    .card:hover,
-    .execucao-card:hover,
-    .caracteristica-card:hover,
-    .card-caracteristica:hover {
-        transform: none;
-    }
+.obra:hover img, .obra-card:hover .obra-card-img img, .execucao-card:hover .execucao-imagem img { transform: none; }
 
-    .obra:hover img,
-    .obra-card:hover .obra-card-img img,
-    .execucao-card:hover .execucao-imagem img {
-        transform: none;
-    }
+nav a::after { display: none; }
+}
 
-    nav a::after {
-        display: none;
-    }
+/* ==================================================
+   GALERIA / MODAL — RESPONSIVO
+   ================================================== */
+@media (max-width: 900px) {
+    .galeria { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .galeria { grid-template-columns: 1fr; gap: 25px; }
+    .obra-imagem { aspect-ratio: 16 / 9; }
+    .obra-imagem > img { width: 100%; height: 100%; object-fit: contain; }
+    .obra figcaption { padding: 18px 10px 10px; }
+    .obra figcaption strong { font-size: 18px; }
+    .obra figcaption span { font-size: 14px; }
+    .modal-conteudo { width: 94vw; max-height: 92vh; padding: 18px; }
+    .modal-img { width: auto; height: auto; max-width: 88vw; max-height: 60vh; object-fit: contain; }
+    .modal-info { padding: 15px 5px 5px; }
+    .modal-info h2 { font-size: 24px; }
+    .modal-anterior, .modal-proximo { width: 40px; height: 40px; font-size: 18px; }
+    .modal-anterior { left: 10px; } .modal-proximo { right: 10px; }
+}
+@media (max-width: 600px) {
+    .galeria { grid-template-columns: 1fr; gap: 20px; }
+    .obra-imagem { aspect-ratio: 16 / 9; }
+    .obra-imagem > img { width: 100%; height: 100%; object-fit: contain; }
+    .obra figcaption { padding: 15px 8px 8px; }
+    .obra figcaption strong { font-size: 17px; } .obra figcaption span { font-size: 13px; }
+    .modal-projeto { padding: 10px; }
+    .modal-conteudo { width: 96vw; max-height: 94vh; padding: 15px; border-radius: 18px; }
+    .modal-img { width: auto; height: auto; max-width: 90vw; max-height: 55vh; object-fit: contain; }
+    .modal-info h2 { font-size: 19px; } .modal-info p { font-size: 14px; }
+    .fechar-modal { width: 40px; height: 40px; top: 10px; right: 10px; }
+    .modal-anterior, .modal-proximo { width: 38px; height: 38px; font-size: 16px; }
+    .modal-anterior { left: 8px; } .modal-proximo { right: 8px; }
+}
+@media (max-width: 480px) {
+    .obra-imagem { aspect-ratio: 16 / 9; }
+    .obra-imagem > img { width: 100%; height: 100%; object-fit: contain; }
+    .obra figcaption { padding-top: 13px; } .obra figcaption strong { font-size: 16px; } .obra figcaption span { font-size: 13px; }
+    .modal-img { max-width: 90vw; max-height: 50vh; }
+    .modal-info h2 { font-size: 18px; } .modal-info p { font-size: 13px; }
+    .modal-anterior, .modal-proximo { width: 34px; height: 34px; font-size: 15px; }
 }
